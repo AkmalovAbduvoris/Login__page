@@ -15,11 +15,11 @@ async function Post() {
     })
     .then(g => g.json())
     .then(data => {
-        if (!data.token) {           
-            return 
-        }else{
+        if (data.token) {           
             window.localStorage.setItem('token',data.token)
-            console.log('token succes added');
+            // window.location.href = '/'
+        }else{
+            
         }
     })
     
@@ -33,7 +33,7 @@ async function Post() {
             <input class="hero__inp" placeholder="Email" v-model="login" :on-input="(e) => (login = e.target.value)" type="text"/>
             <input class="hero__inp" placeholder="Password" v-model="pass" :on-input="(e) => (pass = e.target.value)" type="password"/>
             <button class="hero__btn" @click="Post">SIGNUP</button>
-            <small class="hero__text"> Don't have an account?  <a class="hero__link" href="http://localhost:5173/login">Sign In</a></small>
+            <small class="hero__text"> Don't have an account?  <a class="hero__link" href="/login">Sign In</a></small>
         </div>
     </div>
 </section>

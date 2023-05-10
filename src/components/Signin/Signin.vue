@@ -16,6 +16,7 @@ async function Fetchall(){
     .then(data => {
         if(data.token){
             window.localStorage.setItem('token' , data.token)
+            // window.location.href = '/'
         }else{
         }
     })
@@ -43,7 +44,7 @@ function press(){
                         <input class="login__inp" type="text" placeholder="Name" v-model="email" :on-input="(e) =>(email = e.target.value)">
                         <input class="login__inp" type="password" placeholder="Password" v-model="pass" :on-input="(e)=>(pass = e.target.value)">
                         <button class="login__btn" @click="press">SIGN IN</button>
-                        <small class="login__link">Don't have an account?<a href="http://localhost:5173/register">Sign Up</a></small>
+                        <small class="login__link">Don't have an account?<a href="/register">Sign Up</a></small>
                     </div>
                 </div>
             </div>

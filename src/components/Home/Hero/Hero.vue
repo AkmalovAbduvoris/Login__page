@@ -1,4 +1,5 @@
     <script setup>
+    import './Hero.css'
 </script>
 <template>
     <section class="hero">
