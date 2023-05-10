@@ -1,4 +1,4 @@
-    <script setup>
+<script setup>
     import './Hero.css'
 </script>
 <template>
